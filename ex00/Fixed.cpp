@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 11:18:53 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/03/23 14:33:22 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/03/23 14:45:35 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,12 @@ Fixed &Fixed::operator=(const Fixed &otherOne){
         this->fixed_point= otherOne.fixed_point;
     }
     return (*this);
+}
+
+int Fixed::getRawBits(void) const {
+    return (this->fixed_point);
+}
+
+void Fixed::setRawBits(int const raw){
+    this->fixed_point = raw;
 }

@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 11:19:33 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/03/23 14:09:38 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/03/23 15:00:26 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 class Fixed{
     private:
         int                 fixed_point;
-        static const int    fract_bits;
+        static const int    fract_bits = 0;
     public:
         //default constructor
         Fixed();
