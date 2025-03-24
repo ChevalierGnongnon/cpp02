@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 11:19:33 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/03/23 15:52:02 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/03/24 15:05:51 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ class Fixed{
         ~Fixed();
         int     getRawBits(void) const;
         void    setRawBits(int const raw);
-
 };
 
 #endif

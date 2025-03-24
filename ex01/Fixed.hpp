@@ -6,13 +6,14 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 11:19:33 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/03/23 15:52:02 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/03/24 15:12:57 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_HPP
 # define FIXED_HPP
 # include <iostream>
+# include <cmath>
 
 class Fixed{
     private:
@@ -21,15 +22,22 @@ class Fixed{
     public:
         //default constructor
         Fixed();
+        //Constructor that takes a const int as param
+        Fixed(const int value);
+        //Constructor that takes a const-float number as param
+        Fixed(const float value);
         //copy constructor
         Fixed(const Fixed &src);
         //copy assignment operator
         Fixed &operator = (const Fixed &otherOne);
         //destructor
         ~Fixed();
+        //Getters and setters
         int     getRawBits(void) const;
         void    setRawBits(int const raw);
-
+        //Member functions
+        float   toFloat(void) const;
+        int     toInt(void) const;
 };
 
 #endif

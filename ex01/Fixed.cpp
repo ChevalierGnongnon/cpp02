@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 11:18:53 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/03/23 15:52:49 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/03/24 17:58:21 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,13 @@
 Fixed::Fixed(){
     std::cout << "default constructor called" << std::endl;
     this->fixed_point = 0;
+}
+
+Fixed::Fixed(const int value){
+    
+}
+Fixed::Fixed(const float value){
+    
 }
 
 Fixed::~Fixed(){
@@ -41,4 +48,12 @@ int Fixed::getRawBits(void) const {
 
 void Fixed::setRawBits(int const raw){
     this->fixed_point = raw;
+}
+
+float Fixed::toFloat(void) const{
+    return ((float) this->getRawBits() / (1 << this->fract_bits));
+}
+
+int Fixed::toInt(void) const{
+    return (this->getRawBits() >> this->fract_bits);
 }
