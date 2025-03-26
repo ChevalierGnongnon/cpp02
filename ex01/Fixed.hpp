@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 11:19:33 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/03/24 15:12:57 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/03/26 15:25:23 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,9 @@ class Fixed{
         float   toFloat(void) const;
         int     toInt(void) const;
 };
+
+
+std::ostream &operator<<(std::ostream &out, const Fixed &fixed);
+
 
 #endif
