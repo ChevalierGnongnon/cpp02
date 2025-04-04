@@ -6,7 +6,34 @@
 #    By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/04 11:28:40 by chhoflac          #+#    #+#              #
-#    Updated: 2025/04/04 11:28:41 by chhoflac         ###   ########.fr        #
+#    Updated: 2025/04/04 11:33:31 by chhoflac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+NAME = fixed
+
+SOURCES = main.cpp \
+	Fixed.cpp
+
+OBJS = $(SOURCES:.cpp=.o)
+
+RM = rm -rf
+
+CC = c++
+
+FLAGS = -Werror -Wextra -Wall
+
+all: $(NAME)
+
+$(NAME):$(OBJS)
+	$(CC) $(FLAGS) $(OBJS) -o $(NAME) --std=c++98
+
+clean:
+	$(RM) $(OBJS)
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: fclean $(NAME)
+
+.PHONY: all clean fclean re

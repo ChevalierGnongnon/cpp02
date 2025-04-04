@@ -6,7 +6,12 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/04 11:28:36 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/04/04 11:28:37 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/04/04 11:34:02 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Fixed.hpp"
+
+int main(void){
+	return (0);
+}
