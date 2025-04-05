@@ -6,13 +6,14 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/04 11:28:33 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/04/04 11:31:32 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/04/04 20:37:01 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_HPP
 # define FIXED_HPP
 # include <iostream>
+# include <cmath>
 
 class Fixed{
     private:
@@ -21,14 +22,46 @@ class Fixed{
     public:
         //default constructor
         Fixed();
+        //Constructor that takes a const int as param
+        Fixed(const int value);
+        //Constructor that takes a const-float number as param
+        Fixed(const float value);
         //copy constructor
         Fixed(const Fixed &src);
         //copy assignment operator
         Fixed &operator = (const Fixed &otherOne);
         //destructor
         ~Fixed();
+        //Getters and setters
         int     getRawBits(void) const;
         void    setRawBits(int const raw);
+        //Member functions
+        float   toFloat(void) const;
+        int     toInt(void) const;
+        //comparition operators
+        bool operator<=(const Fixed &otherOne) const;
+        bool operator<(const Fixed &otherOne) const;
+        bool operator>=(const Fixed &otherOne) const;
+        bool operator>(const Fixed &otherOne) const;
+        bool operator!=(const Fixed &otherOne) const;
+        bool operator==(const Fixed &otherOne) const;
+        //arithmethic operators
+        Fixed operator+(const Fixed &otherOne) const;
+        Fixed operator-(const Fixed &otherOne) const;
+        Fixed operator*(const Fixed &otherOne) const;
+        Fixed operator/(const Fixed &otherOne) const;
+        //increment/decrement operators
+        Fixed &operator++();
+        Fixed operator++(int);
+        Fixed &operator--();
+        Fixed operator--(int);
+        
 };
+
+
+std::ostream &operator<<(std::ostream &out, const Fixed &fixed);
+
+//comparition operators
+
 
 #endif

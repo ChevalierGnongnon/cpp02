@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/04 11:28:29 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/04/04 11:32:51 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/04/04 18:53:25 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,3 +42,4 @@ int Fixed::getRawBits(void) const {
 void Fixed::setRawBits(int const raw){
 	this->fixed_point = raw;
 }
+
