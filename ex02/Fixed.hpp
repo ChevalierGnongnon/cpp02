@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/04 11:28:33 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/04/04 20:37:01 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/04/05 18:14:07 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,22 +39,22 @@ class Fixed{
         float   toFloat(void) const;
         int     toInt(void) const;
         //comparition operators
-        bool operator<=(const Fixed &otherOne) const;
-        bool operator<(const Fixed &otherOne) const;
-        bool operator>=(const Fixed &otherOne) const;
-        bool operator>(const Fixed &otherOne) const;
-        bool operator!=(const Fixed &otherOne) const;
-        bool operator==(const Fixed &otherOne) const;
-        //arithmethic operators
-        Fixed operator+(const Fixed &otherOne) const;
-        Fixed operator-(const Fixed &otherOne) const;
-        Fixed operator*(const Fixed &otherOne) const;
-        Fixed operator/(const Fixed &otherOne) const;
-        //increment/decrement operators
-        Fixed &operator++();
-        Fixed operator++(int);
-        Fixed &operator--();
-        Fixed operator--(int);
+		bool	operator<=(const Fixed &otherOne) const;
+		bool	operator<(const Fixed &otherOne) const;
+		bool	operator>=(const Fixed &otherOne) const;
+		bool	operator>(const Fixed &otherOne) const;
+		bool	operator!=(const Fixed &otherOne) const;
+		bool 	operator==(const Fixed &otherOne) const;
+		//arithmethic operators
+		Fixed	operator+(const Fixed &otherOne) const;
+		Fixed	operator-(const Fixed &otherOne) const;
+		Fixed	operator*(const Fixed &otherOne) const;
+		Fixed	operator/(const Fixed &otherOne) const;
+		//increment/decrement operators
+		Fixed	&operator++();
+		Fixed	operator++(int);
+		Fixed	&operator--();
+		Fixed	operator--(int);
         
 };
 
