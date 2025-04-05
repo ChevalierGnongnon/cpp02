@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/04 11:28:33 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/04/05 18:14:07 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/04/05 22:55:57 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,11 @@ class Fixed{
 		Fixed	&operator--();
 		Fixed	operator--(int);
         
+        //min and max
+        static Fixed &min(Fixed &a, Fixed &b);
+        static const Fixed &min(const Fixed &a, const Fixed &b);
+        static Fixed &max(Fixed &a, Fixed &b);
+        static const Fixed &max(const Fixed &a, const Fixed &b);
 };
 
 

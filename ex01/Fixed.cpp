@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 11:18:53 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/03/26 15:30:10 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/04/05 22:18:00 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Fixed::Fixed(const int value){
 }
 Fixed::Fixed(const float value){
     std::cout << "Float constructor called" << std::endl;
-    this->fixed_point = round(value *(1 << fract_bits));
+    this->fixed_point = roundf(value *(1 << fract_bits));
 }
 
 Fixed::~Fixed(){

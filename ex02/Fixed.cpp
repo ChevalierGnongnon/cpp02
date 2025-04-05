@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/04 11:28:29 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/04/05 20:09:40 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/04/05 22:27:04 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Fixed::Fixed(const int value){
 }
 Fixed::Fixed(const float value){
     std::cout << "Float constructor called" << std::endl;
-    this->fixed_point = round(value *(1 << fract_bits));
+    this->fixed_point = roundf(value *(1 << fract_bits));
 }
 
 Fixed::~Fixed(){
@@ -116,10 +116,15 @@ Fixed	Fixed::operator*(const Fixed &otherOne) const{
 	Fixed	newOne;
 	long	res;
 
-	res = (long)this->fixed_point * (long)otherOne.fixed_point;
+	res = ((long)this->fixed_point * (long)otherOne.fixed_point) >> this->fract_bits;
 	if (res > 2147483647)
 	{
 		std::cerr << "Error: int overflow !" << std::endl;
+		return (Fixed());
+	}
+	if (res < -2147483648)
+	{
+		std::cerr << "Error: int underflow !" << std::endl;
 		return (Fixed());
 	}
 	newOne.setRawBits((int) res);
@@ -132,7 +137,7 @@ Fixed	Fixed::operator/(const Fixed &otherOne) const{
 
 	if (otherOne.getRawBits() == 0) {
         std::cerr << "Error: Division by zero!" << std::endl;
-        return Fixed();  // Return a default-constructed object as a signal of error.
+        return Fixed();
     }
 	res = (long)this->fixed_point * 256;
 	res /= (long)otherOne.fixed_point;
@@ -147,7 +152,8 @@ Fixed	Fixed::operator/(const Fixed &otherOne) const{
 
 //increment/decrement operators
 Fixed	&Fixed::operator++(){
-	
+	this->fixed_point++;
+	return (*this);
 }
 
 Fixed	Fixed::operator++(int){
@@ -158,15 +164,16 @@ Fixed	Fixed::operator++(int){
 }
 
 Fixed	&Fixed::operator--(){
-	
+	this->fixed_point--;
+	return (*this);
 }
+
 Fixed	Fixed::operator--(int){
 	Fixed tmp(*this);
 		
 	this->fixed_point--;
 	return (tmp);
 }
-        
 
 std::ostream &operator<<(std::ostream &out, const Fixed &fixed){
     out << fixed.toFloat();
