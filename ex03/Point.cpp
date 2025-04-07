@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 16:41:06 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/04/07 12:13:12 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/04/07 12:20:10 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Point::~Point(){
 Point::Point(Fixed x, Fixed y){
     std::cout << "Constructor called" << std::endl;
 	this->pos_x = x;
-	this->pos_x = y;
+	this->pos_y = y;
 }
 
 Point::Point(const Point &src){
@@ -34,17 +34,28 @@ Point::Point(const Point &src){
 	this->pos_y = src.pos_y;
 }
 
-Point &Point::operator = (const Point &otherOne){
-	if (this!= &otherOne)
+Point	&Point::operator = (const Point &otherOne){
+	if (this!= &otherOne){
 		this->pos_x = otherOne.pos_x;
 		this->pos_y = otherOne.pos_y;
+	}
+	std::cout << "copy assignment operator called" << std::endl;
+	return (*this);
 }
 
-int Point::get_posX() const{
-	
+Fixed	Point::get_posX() const{
+	return (this->pos_x);
 }
 
-int Point::get_posY() const{
-	
+Fixed	Point::get_posY() const{
+	return (this->pos_y);
+}
+
+void	Point::set_posX(const Fixed &x){
+	this->pos_x = x;
+}
+
+void	Point::set_posY(const Fixed &y){
+	this->pos_y = y;
 }
 
