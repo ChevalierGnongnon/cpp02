@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 17:24:52 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/04/07 12:12:07 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/04/07 15:37:16 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ class Point{
 		void	set_posY(const Fixed &y);
 		
 };
+bool	bsp(Point &a, Point &b, Point &c, Point &p);
 
 #endif

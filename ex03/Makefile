@@ -6,14 +6,16 @@
 #    By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/04 11:28:40 by chhoflac          #+#    #+#              #
-#    Updated: 2025/04/04 11:33:31 by chhoflac         ###   ########.fr        #
+#    Updated: 2025/04/07 15:39:24 by chhoflac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fixed
 
 SOURCES = main.cpp \
-	Fixed.cpp
+	Fixed.cpp \
+	bsp.cpp \
+	Point.cpp
 
 OBJS = $(SOURCES:.cpp=.o)
 
