@@ -6,10 +6,12 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 17:24:52 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/04/06 17:29:20 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/04/07 09:44:07 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef POINT_HPP
+# define POINT_HPP
 #include "Fixed.hpp"
 
 class Point{
@@ -26,3 +28,4 @@ class Point{
         int get_posY() const;
 };
 
+#endif
