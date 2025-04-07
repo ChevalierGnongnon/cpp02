@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 17:24:52 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/04/07 12:01:40 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/04/07 12:12:07 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Point{
 		Fixed pos_y;
     public:
         Point();
-        Point(float pos_x, float pos_y);
+        Point(Fixed pos_x, Fixed pos_y);
         Point(const Point &src);
         Point &operator = (const Point &otherOne);
         ~Point();

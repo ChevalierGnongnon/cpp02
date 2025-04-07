@@ -6,32 +6,38 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 16:41:06 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/04/07 10:05:48 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/04/07 12:13:12 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Point.hpp"
 
-Point::Point():pos_x(0), pos_y(0){
+Point::Point(){
     std::cout << "Point default constructor called" << std::endl;
+	this->pos_x = Fixed(0);
+	this->pos_y = Fixed(0);
 }
 
 Point::~Point(){
     std::cout << "Point destructor called" << std::endl;
 }
 
-Point::Point(float x, float y): pos_x(x), pos_y(y){
+Point::Point(Fixed x, Fixed y){
     std::cout << "Constructor called" << std::endl;
+	this->pos_x = x;
+	this->pos_x = y;
 }
 
-Point::Point(const Point &src) : pos_x(src.get_posX()), pos_y(src.get_posY()){
+Point::Point(const Point &src){
 	std::cout << "Copy constructor called" << std::endl;
+	this->pos_x = src.pos_x;
+	this->pos_y = src.pos_y;
 }
 
 Point &Point::operator = (const Point &otherOne){
-	std::cout << "Copy assignment operator called" << std::endl;
-	if (this != &otherOne)
-		this.
+	if (this!= &otherOne)
+		this->pos_x = otherOne.pos_x;
+		this->pos_y = otherOne.pos_y;
 }
 
 int Point::get_posX() const{
