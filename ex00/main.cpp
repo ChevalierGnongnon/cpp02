@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 15:02:45 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/04/04 11:32:10 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/04/08 14:12:02 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int main(void){
 	Fixed a;
 	Fixed b(a);
 	Fixed c;
+	
 	c = b;
 	std::cout << a.getRawBits() << std::endl;
 	std::cout << b.getRawBits() << std::endl;

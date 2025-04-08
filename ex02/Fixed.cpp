@@ -6,37 +6,37 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/04 11:28:29 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/04/06 15:37:03 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/04/08 14:18:55 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
 Fixed::Fixed(){
-    std::cout << "default constructor called" << std::endl;
+    // std::cout << "default constructor called" << std::endl;
     this->fixed_point = 0;
 }
 
 Fixed::Fixed(const int value){
-    std::cout << "Int constructor called" << std::endl;
+    // std::cout << "Int constructor called" << std::endl;
     this->fixed_point = value << fract_bits;
 }
 Fixed::Fixed(const float value){
-    std::cout << "Float constructor called" << std::endl;
+    // std::cout << "Float constructor called" << std::endl;
     this->fixed_point = roundf(value *(1 << fract_bits));
 }
 
 Fixed::~Fixed(){
-    std::cout << "destructor called" << std::endl;
+    // std::cout << "destructor called" << std::endl;
 }
 
 Fixed::Fixed(const Fixed &src){
     this->fixed_point = src.fixed_point;
-    std::cout << "copy constructor called" << std::endl;
+    // std::cout << "copy constructor called" << std::endl;
 }
 
 Fixed &Fixed::operator=(const Fixed &otherOne){
-    std::cout << "copy assignment operator called" << std::endl;
+    // std::cout << "copy assignment operator called" << std::endl;
     if (this != &otherOne){
         this->fixed_point= otherOne.fixed_point;
     }

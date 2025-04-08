@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/04 11:28:33 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/04/05 22:55:57 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/04/08 13:44:36 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,6 @@ class Fixed{
 
 
 std::ostream &operator<<(std::ostream &out, const Fixed &fixed);
-
-//comparition operators
 
 
 #endif
