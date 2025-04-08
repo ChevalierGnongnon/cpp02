@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 14:34:35 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/03/26 15:27:14 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/04/08 13:35:42 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,4 @@ int main( void ) {
     std::cout << "c is " << c.toInt() << " as integer" << std::endl;
     std::cout << "d is " << d.toInt() << " as integer" << std::endl;
     return 0;
-    }
+ }
