@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 16:41:06 by chhoflac          #+#    #+#             */
-/*   Updated: 2025/04/08 12:48:37 by chhoflac         ###   ########.fr       */
+/*   Updated: 2025/04/08 15:24:04 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Point::Point(const Point &src) : x(src.x), y(src.y) {
 }
 
 Point::~Point(){
-	std::cout << "Point destructor called" << std::endl;
+	// std::cout << "Point destructor called" << std::endl;
 }
 
 Point &Point::operator=(const Point &otherOne){
